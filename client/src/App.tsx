@@ -1,14 +1,12 @@
 import React from "react";
-import Nav from "./components/Nav";
-
+import { useRoutes } from "react-router-dom";
+import { routes } from "./routes";
 import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <Nav />
-    </div>
-  );
+  const routesRendered = useRoutes(routes);
+
+  return <div className="App">{routesRendered}</div>;
 }
 
 export default App;
