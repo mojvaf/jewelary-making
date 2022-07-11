@@ -1,7 +1,7 @@
-import Login from "./pages/login/login";
-import Register from "./pages/register/register";
-import Home from "./pages/home/home";
-import ProjectList from "./pages/projectList/projectList";
+import Login from "./components/login/Login";
+import Register from "./components/register/Register";
+import Home from "./pages/home/Home";
+import ProjectList from "./pages/projectList/ProjectList";
 import Layout from "./components/layout/Layout";
 import AdminLayout from "./components/layout/AdminLayout";
 import CounterPage from "./pages/counter/CounterPage";
@@ -9,7 +9,7 @@ import CounterPage from "./pages/counter/CounterPage";
 
 export const routes = [
   {
-    path: "/app/*",
+    path: "/",
     element: <Layout />,
     children: [
       {
