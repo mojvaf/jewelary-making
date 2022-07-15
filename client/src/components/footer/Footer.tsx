@@ -1,6 +1,7 @@
 import React from "react";
 import "./footer.css";
 import logo from '../../images/pearls.png'
+import { FaFacebook,FaInstagram,FaTwitter } from 'react-icons/fa';
 const Footer = () => {
   return (
     <footer className="footer">
@@ -12,17 +13,17 @@ const Footer = () => {
           <ul className="social-links">
             <li>
               <a className="footer-link" href="/">
-                
+                <FaFacebook/>
               </a>
             </li>
             <li>
               <a className="footer-link" href="/">
-                
+              <FaInstagram/> 
               </a>
             </li>
             <li>
               <a className="footer-link" href="/">
-                
+                <FaTwitter/>
               </a>
             </li>
           </ul>

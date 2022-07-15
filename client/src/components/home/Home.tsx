@@ -4,7 +4,7 @@ import stain from "../../images/stainless.jpg";
 
 const Home = () => {
   return (
-    <section className="section-hero">
+    <main className="section-hero">
       <div className="hero">
         <div className="hero-text-box">
           <h1 className="heading-primary">Jewelry Making</h1>
@@ -12,12 +12,12 @@ const Home = () => {
             Have you ever spotted an expensive necklace at a store and said to
             yourself- ‘I could make that at home myself’? And have you ever
             looked at art supplies and been inspired to create accessories and
-            jewellery of your own design?
+            jewelry of your own design?
           </p>
           <p className="hero-description">
             If you have, then you’re not alone in your search for the perfect
             DIY hobby that is also a form of art. There are millions of women
-            who are creating handmade fashion jewellery at home for personal
+            who are creating handmade fashion jewelry at home for personal
             wear, and some have even successfully turned their hobbies into a
             flourishing business.
           </p>
@@ -26,7 +26,7 @@ const Home = () => {
           <img src={stain} alt="stainless" className="hero-img" />
         </div>
       </div>
-    </section>
+    </main>
   );
 };
 

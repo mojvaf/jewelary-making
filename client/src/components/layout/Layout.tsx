@@ -8,11 +8,9 @@ const Layout = () => {
   return (
     <div>
       <Nav />
-      <main>
-        <Home />
-      </main>
-      <Outlet />
+      <Home />
       <Footer />
+      <Outlet />
     </div>
   );
 };
