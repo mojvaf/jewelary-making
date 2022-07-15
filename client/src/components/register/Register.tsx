@@ -57,7 +57,7 @@ const Register = () => {
           <div className="form-control">
             <label>Last name</label>
             <input
-              placeholder="Last Name*"
+              placeholder="Last Name"
               name="last"
               value={last}
               onChange={(e) => handelChange(e)}
