@@ -2,7 +2,7 @@ import React from "react";
 import "./nav.css";
 import logo from "../../images/pearls.png";
 import { FaHome, FaSignInAlt } from 'react-icons/fa';
-const Nav = () => {
+const Nav:React.FC = () => {
   return (
     <header className="header">
       <nav className="main-nav">

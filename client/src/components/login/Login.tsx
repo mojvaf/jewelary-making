@@ -1,6 +1,7 @@
 import React from "react";
 import './login.css'
-const Login = () => {
+
+const Login:React.FC = () => {
   return <div className="section-log">
   <div className="log-box">
     <form className="form">

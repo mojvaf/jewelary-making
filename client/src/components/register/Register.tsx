@@ -3,7 +3,7 @@ import "./register.css";
 import { useAppDispatch } from "../../redux/store";
 import { register } from "../../redux/slice/auth";
 
-const Register = () => {
+const Register:React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
     last: "",
