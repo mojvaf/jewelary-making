@@ -2,7 +2,7 @@ import React from "react";
 import "./footer.css";
 import logo from '../../images/pearls.png'
 import { FaFacebook,FaInstagram,FaTwitter } from 'react-icons/fa';
-const Footer = () => {
+const Footer:React.FC = () => {
   return (
     <footer className="footer">
       <div className="container grid grid--footer">

@@ -2,7 +2,7 @@ import React from "react";
 import "./home.css";
 import stain from "../../images/stainless.jpg";
 
-const Home = () => {
+const Home:React.FC = () => {
   return (
     <main className="section-hero">
       <div className="hero">
