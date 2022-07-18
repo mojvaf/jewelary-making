@@ -2,17 +2,19 @@ import React, { useState } from "react";
 import "./register.css";
 import { useAppDispatch } from "../../redux/store";
 import { register } from "../../redux/slice/auth";
+import {setAlert} from '../../redux/slice/alert'
 
-const Register:React.FC = () => {
+const Register: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
     last: "",
     email: "",
     password: "",
+    password2: "",
   });
 
-  const { name, last, email, password } = formData;
-  
+  const { name, last, email, password, password2 } = formData;
+
   const dispatch = useAppDispatch();
 
   const handelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -24,16 +26,21 @@ const Register:React.FC = () => {
     setFormData(newForm);
   };
 
-  const handleSubmit =(e: React.FormEvent<HTMLFormElement>)=>{
-    e.preventDefault()
-    const body = {
-      name: formData.name,
-      last: formData.last,
-      email: formData.email,
-      password:formData.password
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (password !== password2) {
+      setAlert()
+    } else {
+      const body = {
+        name: formData.name,
+        last: formData.last,
+        email: formData.email,
+        password: formData.password,
+        password2: formData.password2,
+      };
+      dispatch(register(body));
     }
-     dispatch(register(body))
-  }
+  };
 
   return (
     <div className="section-register">
@@ -84,6 +91,17 @@ const Register:React.FC = () => {
               onChange={(e) => handelChange(e)}
             />
             <small>Please enter your password</small>
+          </div>
+          <div className="form-control">
+            <label>re-enter Password</label>
+            <input
+              type="password"
+              placeholder="confirm password*"
+              value={password2}
+              name="password2"
+              onChange={(e) => handelChange(e)}
+            />
+            <small>Please confirm your password </small>
           </div>
           <div className="form-control">
             <label>Where did you hear from us</label>

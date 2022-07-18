@@ -11,7 +11,7 @@ const Nav:React.FC = () => {
         {" "}
         <img src={logo} alt="jewelry logo" className="logo" />
       </a></li>
-          <li> <a href="/app" className="main-nav-link">
+          <li> <a href="/dashboard" className="main-nav-link">
                 Projects
             </a></li>
         </ul>
@@ -19,7 +19,7 @@ const Nav:React.FC = () => {
       <nav className="main-nav">
         <ul className="main-nav-list">
           <li>
-            <a href="/app" className="main-nav-link">
+            <a href="/" className="main-nav-link">
               <FaHome />  Home
             </a>
           </li>

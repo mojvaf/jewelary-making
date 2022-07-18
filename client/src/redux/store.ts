@@ -3,12 +3,14 @@ import counterReducer from "./slice/counter";
 import itemReducer from './slice/item'
 import {TypedUseSelectorHook, useDispatch, useSelector} from "react-redux";
 import authReducer from './slice/auth'
+import alertReducer from './slice/alert'
 
 const store =  configureStore({
   reducer: {
     counter: counterReducer,
     items: itemReducer,
-    auth: authReducer
+    auth: authReducer,
+    alert: alertReducer
   },
 });
 
