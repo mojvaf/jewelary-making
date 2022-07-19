@@ -11,7 +11,7 @@ const Dashboard:React.FC = () => {
       {projects.map((project)=> 
       <div className="grid">
         <h1>{project.artist}</h1>
-        <img src={project.cover} alt={project.artist}/>
+        <img className="imgo" src={project.cover} alt={project.artist}/>
       </div>)}
     </div>
   );
