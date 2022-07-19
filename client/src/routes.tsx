@@ -3,7 +3,7 @@ import Register from "./components/register/Register";
 import Home from "./components/home/Home";
 import Layout from "./components/layout/Layout";
 import Dashboard from "./components/dashboard/Dashboard";
-
+import Alert from './components/alert/Alert'
 
 
 export const routes = [
@@ -17,6 +17,9 @@ export const routes = [
       }
     ],
   },
+  /*{path:'/',
+  element: <Alert/>,
+},*/
   {
     path: "/login",
     element: <Login />,

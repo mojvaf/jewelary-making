@@ -210,3 +210,31 @@ strong {
   gap: 1.6rem;
   line-height: 1.2;
 }
+
+.alert {
+  padding: 1rem;
+  margin: 1rem 0;
+  opacity: 0.9;
+  background-color: #017ab2;
+  color: #333;
+}
+
+.alert-primary {
+  background-color: #017ab2;
+  color: #d9e2e1;
+}
+
+.alert-light{
+  background-color: yellow;
+  color: #555;
+}
+
+.alert-danger{
+  background-color: #bb4b2d;
+  color: #555;
+}
+
+.alert-success{
+  background-color: green;
+  color: #fff;
+}
