@@ -7,7 +7,7 @@ const Alert = () => {
 
   return (
     alert !== null && alert.length > 0 && alert.map(ale=>{
-      <div /* key={ale} className={`alert alert-${ale.alertType}`*/>hello</div>
+      <div /* key={ale} className={`alert alert-${ale.alertType}`*/></div>
     })
   )
 }
