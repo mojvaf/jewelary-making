@@ -47,6 +47,10 @@
   cursor: pointer;
 }
 
+.selected{
+    background-color: #26413e;
+    color: #e8eeed;
+}
 .library-list:hover {
   background-color: #a0b6b4;
 }
