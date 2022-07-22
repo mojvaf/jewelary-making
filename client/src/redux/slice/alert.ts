@@ -1,36 +1,39 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import uuid from 'uuid'
+import * as uuid from "uuid";
 
-type itemType={
-    msg:string,
-    alertType:string
-    id:string 
+type itemType = {
+  msg: string;
+  alertType: string;
+  id: string;
+};
+
+interface StateType {
+  alert: itemType[];
 }
-
-interface StateType  {
-    
-    alert:itemType[] 
-}
-
 
 const slice = createSlice({
-    name:'Alert',
-   initialState:{
-    alert:[]
-   } as StateType,
-   reducers: {
-    setAlert:(state:StateType,action:PayloadAction)=>{
-        //return [...state.alert, state.payload]
-       console.log('success')
+  name: "Alert",
+  initialState: {
+    alert: [],
+  } as StateType,
+  reducers: {
+    setAlert: (
+      state: StateType,
+      action: PayloadAction<{ msg: string; alertType: string }>
+    ) => {
+      //[...state,action.payload]
+      state.alert.push({
+        msg: action.payload.msg,
+        alertType: action.payload.alertType,
+        id: uuid.v4(),
+      });
     },
-    removeAlert: (state:StateType,action:PayloadAction<void>)=>{
-        //state.alert.filter(alert=> alert.id !== action.payload)
-        console.log('removed')
-    }
-   }
-})
+    removeAlert: (state: StateType, action: PayloadAction<itemType["id"]>) => {
+      state.alert = state.alert.filter((item) => item.id !== action.payload);
+    },
+  },
+});
 
-
-export const { setAlert } = slice.actions;
+export const { setAlert, removeAlert } = slice.actions;
 
 export default slice.reducer;

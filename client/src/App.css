@@ -53,7 +53,7 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 52%;
 }
 
 body {
@@ -231,7 +231,7 @@ strong {
 
 .alert-danger{
   background-color: #bb4b2d;
-  color: #555;
+  color: wheat;
 }
 
 .alert-success{

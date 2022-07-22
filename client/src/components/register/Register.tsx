@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./register.css";
-import { useAppDispatch } from "../../redux/store";
+import { useAppDispatch, useAppSelector } from "../../redux/store";
 import { register } from "../../redux/slice/auth";
-import {setAlert} from '../../redux/slice/alert'
+import { setAlert } from "../../redux/slice/alert";
 
 const Register: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -16,6 +16,7 @@ const Register: React.FC = () => {
   const { name, last, email, password, password2 } = formData;
 
   const dispatch = useAppDispatch();
+  const alerts = useAppSelector((store) => store.alert.alert);
 
   const handelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newForm = {
@@ -29,8 +30,12 @@ const Register: React.FC = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (password !== password2) {
-      //setAlert('passwords do not match', 'danger')
-      setAlert()
+      dispatch(
+        setAlert({
+          msg: "Passwords do not match ",
+          alertType: "danger",
+        })
+      );
     } else {
       const body = {
         name: formData.name,
@@ -51,6 +56,13 @@ const Register: React.FC = () => {
           Sign up here to receive updates about our projects and ways to get
           involved.
         </p>
+        {alerts !== null &&
+          alerts.length > 0 &&
+          alerts.map((item) => (
+            <div key={item.id} className={`alert alert-${item.alertType}`}>
+              {item.msg}
+            </div>
+          ))}
         <form className="form-register" onSubmit={handleSubmit}>
           <div className="form-control">
             <label>Name</label>
