@@ -232,9 +232,13 @@ strong {
 .alert-danger{
   background-color: #bb4b2d;
   color: wheat;
+  font-size: 2rem;
+  width: 50%;
 }
 
 .alert-success{
   background-color: green;
   color: #fff;
+  font-size: 2rem;
+  width: 50%;
 }

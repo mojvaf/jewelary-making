@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./register.css";
 import { useAppDispatch, useAppSelector } from "../../redux/store";
 import { register } from "../../redux/slice/auth";
-import { setAlert } from "../../redux/slice/alert";
+import { setAlert, removeAlert } from "../../redux/slice/alert";
 
 const Register: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -35,7 +35,9 @@ const Register: React.FC = () => {
           msg: "Passwords do not match ",
           alertType: "danger",
         })
-      );
+      )
+    
+      ;
     } else {
       const body = {
         name: formData.name,
@@ -45,6 +47,7 @@ const Register: React.FC = () => {
         password2: formData.password2,
       };
       dispatch(register(body));
+      dispatch(setAlert({msg:'You have successfully singed up', alertType:'success'}))
     }
   };
 

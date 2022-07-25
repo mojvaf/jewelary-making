@@ -15,7 +15,7 @@ const Dashboard: React.FC = () => {
         <h3>{currentProject.artist}</h3>
         <button>read more</button>
       </div>
-      <Projects projects={projects} setCurrentProject={setCurrentProject} />
+      <Projects projects={projects} setCurrentProject={setCurrentProject}  />
     </section>
   );
 };

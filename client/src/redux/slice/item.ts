@@ -1,11 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import * as uuid from "uuid";
 
-const uuidv4=()=> {
-    // @ts-ignore
-    return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, c =>
-        (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
-    );
-}
 
 export type ItemType = {
    title: string,
@@ -41,7 +36,7 @@ const slice = createSlice({
             state.id = undefined
            }
         }else{
-            state.itemList.push({title: action.payload, id:uuidv4() })
+            state.itemList.push({title: action.payload,  id: uuid.v4(), })
         }
         
      },

@@ -1,7 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { User } from "../../models/auth";
 import axios from "axios";
-import { config } from "process";
 
 type stateType = {
   token: string;

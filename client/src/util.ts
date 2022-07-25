@@ -52,7 +52,7 @@ const listOfProjects: Project[] = [
     cover:
       "https://scontent.ftxl2-1.fna.fbcdn.net/v/t58.17529-6/128640203_166150899288447_9152779947679128475_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=6cb3ed&_nc_ohc=OFUq-f4K9k8AX_SRYB9&_nc_ht=scontent.ftxl2-1.fna&oh=00_AT-2M810EP-UwUUK0KydkJb9K7l-2U3fPNchIwDZ2u6h8g&oe=62D6767C",
     artist: "Maeberry",
-    id: "43",
+    id: "41",
     active: false,
   },
   {

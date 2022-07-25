@@ -27,11 +27,13 @@ const slice = createSlice({
         alertType: action.payload.alertType,
         id: uuid.v4(),
       });
+     
     },
     removeAlert: (state: StateType, action: PayloadAction<itemType["id"]>) => {
       state.alert = state.alert.filter((item) => item.id !== action.payload);
+    
     },
-  },
+  }
 });
 
 export const { setAlert, removeAlert } = slice.actions;

@@ -5,11 +5,27 @@ import "./project.css";
 interface ProjectsProps {
   projects: Project[];
   setCurrentProject: (data: Project) => void;
+  //setProjects:
 }
 
 const Projects: React.FC<ProjectsProps> = ({ projects, setCurrentProject }) => {
   const handleChange = (project: Project) => {
     setCurrentProject(project);
+    // eslint-disable-next-line array-callback-return
+    const newProject = projects.map((item:Project)=> {
+      if(item.id === project.id){
+        return {
+          ...item,
+          active:true
+        }
+      }else{
+        return{
+          ...item,
+          active:false
+        }
+      }
+    })
+    //setProjects(newProject)
   };
 
   return (
@@ -19,6 +35,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects, setCurrentProject }) => {
         <div
           onClick={() => handleChange(project)}
           className={`library-list ${project.active ? "selected" : ""}`}
+          key={project.id}
         >
           <div
             className="img"
