@@ -3,8 +3,7 @@ import Register from "./components/register/Register";
 import Home from "./components/home/Home";
 import Layout from "./components/layout/Layout";
 import Dashboard from "./components/dashboard/Dashboard";
-import Alert from './components/alert/Alert'
-
+import Alert from "./components/alert/Alert";
 
 export const routes = [
   {
@@ -12,9 +11,13 @@ export const routes = [
     element: <Layout />,
     children: [
       {
-        path: "home",
+        path: "",
         element: <Home />,
-      }
+      },
+      {
+        path: "projects",
+        element: <p>projects...</p>,
+      },
     ],
   },
   /*{path:'/',
@@ -29,7 +32,7 @@ export const routes = [
     element: <Register />,
   },
   {
-    path:'/dashboard',
-    element: <Dashboard/>
-  }
+    path: "/dashboard",
+    element: <Dashboard />,
+  },
 ];

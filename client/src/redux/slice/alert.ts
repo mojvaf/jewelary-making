@@ -22,18 +22,20 @@ const slice = createSlice({
       action: PayloadAction<{ msg: string; alertType: string }>
     ) => {
       //[...state,action.payload]
+      const id = uuid.v4();
       state.alert.push({
         msg: action.payload.msg,
         alertType: action.payload.alertType,
-        id: uuid.v4(),
+        id: id,
       });
-     
+      setTimeout(() => {
+        state.alert = state.alert.filter((item) => item.id !== id);
+      }, 2000);
     },
     removeAlert: (state: StateType, action: PayloadAction<itemType["id"]>) => {
       state.alert = state.alert.filter((item) => item.id !== action.payload);
-    
     },
-  }
+  },
 });
 
 export const { setAlert, removeAlert } = slice.actions;

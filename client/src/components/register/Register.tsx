@@ -35,9 +35,10 @@ const Register: React.FC = () => {
           msg: "Passwords do not match ",
           alertType: "danger",
         })
-      )
-    
-      ;
+      );
+      /*setTimeout(() => {
+        dispatch(removeAlert());
+      }, 2000);*/
     } else {
       const body = {
         name: formData.name,
@@ -47,7 +48,12 @@ const Register: React.FC = () => {
         password2: formData.password2,
       };
       dispatch(register(body));
-      dispatch(setAlert({msg:'You have successfully singed up', alertType:'success'}))
+      dispatch(
+        setAlert({
+          msg: "You have successfully singed up",
+          alertType: "success",
+        })
+      );
     }
   };
 

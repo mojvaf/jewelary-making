@@ -7,6 +7,9 @@
     background-color: #e8eeed;
     box-shadow: 2px 2px 50px #26413e;
     overflow-y: scroll;
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+    opacity: 0;
   }
   
   .library h2 {
@@ -28,6 +31,12 @@
       background-color: #26413e;
       color: #e8eeed;
   }
+
+  .active-library{
+    transform: translateX(0%);
+    opacity: 1;
+}
+
   .library-list:hover {
     background-color: #a0b6b4;
   }

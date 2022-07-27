@@ -1,14 +1,14 @@
 import React from "react";
 import { Project } from "../../util";
-import "./project.css";
-
+import './project.css'
 interface ProjectsProps {
   projects: Project[];
   setCurrentProject: (data: Project) => void;
-  //setProjects:
+  setProjects:(data:Project[])=>void
+  toggleProject: boolean
 }
 
-const Projects: React.FC<ProjectsProps> = ({ projects, setCurrentProject }) => {
+const Projects: React.FC<ProjectsProps> = ({ projects, setCurrentProject,setProjects,toggleProject }) => {
   const handleChange = (project: Project) => {
     setCurrentProject(project);
     // eslint-disable-next-line array-callback-return
@@ -25,11 +25,11 @@ const Projects: React.FC<ProjectsProps> = ({ projects, setCurrentProject }) => {
         }
       }
     })
-    //setProjects(newProject)
+    setProjects(newProject)
   };
 
   return (
-    <div className="library">
+    <div className={`library ${toggleProject ? 'active-library': ''}`}>
       <h2>List of projects</h2>
       {projects.map((project) => (
         <div
