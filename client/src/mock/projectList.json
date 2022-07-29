@@ -2,7 +2,7 @@
   {
     "name": "Wire Jewelry",
     "cover": "https://scontent.ftxl2-1.fna.fbcdn.net/v/t58.17529-6/76537186_572065571291507_6660416342758083158_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6cb3ed&_nc_ohc=3jPIJXK4UwkAX-IfHBZ&_nc_ht=scontent.ftxl2-1.fna&oh=00_AT9j57CMRFmFi0Oak8MQaKIZXAAf9VHqHgu9X4FWJSbvhA&oe=62D689F4",
-    "artist": "Roxana Pardo",
+    "artist": "Mia Winston",
     "id": "11",
     "active": true
   },
@@ -15,7 +15,7 @@
   },
   {
     "name": "Resin Jewelry",
-    "cover": "https://media.istockphoto.com/photos/unfinished-diy-woven-friendship-bracelets-with-abstract-geometric-picture-id1320291381?b=1&k=20&m=1320291381&s=170667a&w=0&h=fx3u2qD3YQmCHqp_yZ-jLna2qcBz8pyW2TGx1tO6JtY=",
+    "cover": "https://scontent.ftxl2-1.fna.fbcdn.net/v/t58.17529-6/99759455_567239425139060_3517756784479700405_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6cb3ed&_nc_ohc=fhCeS7R7yb4AX-Z4vNX&_nc_ht=scontent.ftxl2-1.fna&oh=00_AT_g4erPQLUrX2qugIzpy3z62raDHMGScEP-EWtWqO_NyQ&oe=62E3EF7F",
     "artist": "Mercedes Salazar",
     "id": "32",
     "active": false
@@ -23,7 +23,7 @@
   {
     "name": "Rope",
     "cover": "https://scontent.ftxl2-1.fna.fbcdn.net/v/t58.17529-6/76360890_457517209038763_4867317172681997382_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6cb3ed&_nc_ohc=_1LJlt327qQAX_q2yfp&_nc_ht=scontent.ftxl2-1.fna&oh=00_AT_VU24t12ntIQin7h-EvklHRwgyDoRa5vUUgLIc9sN_ag&oe=62D6B717",
-    "artist": "Beth Pegler",
+    "artist": "Mercedes Salazar",
     "id": "43",
     "active": false
   },
@@ -38,14 +38,35 @@
     "name": "contemporary",
     "cover": "https://scontent.ftxl2-1.fna.fbcdn.net/v/t58.17529-6/128640203_166150899288447_9152779947679128475_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=6cb3ed&_nc_ohc=OFUq-f4K9k8AX_SRYB9&_nc_ht=scontent.ftxl2-1.fna&oh=00_AT-2M810EP-UwUUK0KydkJb9K7l-2U3fPNchIwDZ2u6h8g&oe=62D6767C",
     "artist": "Maeberry",
-    "id": "43",
+    "id": "41",
+    "active": false
+  },
+  {
+    "name": "Breaded jewelry",
+    "cover": "https://scontent.ftxl2-1.fna.fbcdn.net/v/t58.17529-6/100007118_865735528151669_3169719271989557422_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6cb3ed&_nc_ohc=6xgNUTX4wZIAX--XFfd&_nc_ht=scontent.ftxl2-1.fna&oh=00_AT-DgaP2_uhs0pVYZmwun7ZDdq4dIZUkEJzKdkge9Nwb5w&oe=62D6EF08",
+    "artist": "Karen",
+    "id": "61",
     "active": false
   },
   {
     "name": "Custom jewelry",
-    "cover": "https://scontent.ftxl2-1.fna.fbcdn.net/v/t58.17529-6/100007118_865735528151669_3169719271989557422_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6cb3ed&_nc_ohc=6xgNUTX4wZIAX--XFfd&_nc_ht=scontent.ftxl2-1.fna&oh=00_AT-DgaP2_uhs0pVYZmwun7ZDdq4dIZUkEJzKdkge9Nwb5w&oe=62D6EF08",
+    "cover": "https://scontent.ftxl2-1.fna.fbcdn.net/v/t58.17529-6/99801354_794127484922883_3171471976147629307_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6cb3ed&_nc_ohc=GG32EGxegy8AX9g2AgC&_nc_ht=scontent.ftxl2-1.fna&oh=00_AT_EqPX-V18dIbzHjIjQqB44QEIWLUOJDpqnfbuGGj2nyw&oe=62E40CAA",
     "artist": "Karen",
     "id": "65",
+    "active": false
+  },
+  {
+    "name": "Nature jewelry",
+    "cover": "https://scontent.ftxl2-1.fna.fbcdn.net/v/t58.17529-6/76305235_1061364117822385_594185391119976692_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6cb3ed&_nc_ohc=5wIfVMI2cR8AX926Khu&_nc_ht=scontent.ftxl2-1.fna&oh=00_AT_VDhUd1uDXsDrpRh_f1m_urrz1roMCjJGQVipaGeRvOQ&oe=62E406A5",
+    "artist": "Karen",
+    "id": "62",
+    "active": false
+  },
+  {
+    "name": "Laser Cutting",
+    "cover": "https://scontent.ftxl2-1.fna.fbcdn.net/v/t58.17529-6/100317283_1093372707934945_2834869009735422946_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6cb3ed&_nc_ohc=CU68cL_6fiMAX_R7rGv&_nc_ht=scontent.ftxl2-1.fna&oh=00_AT92pMfy36D5q2Is2fLrmD2wcFrQO4stRgL4qu8hOYWO8w&oe=62E3FD04",
+    "artist": "Maeberry",
+    "id": "63",
     "active": false
   }
 ]

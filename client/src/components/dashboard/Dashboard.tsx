@@ -9,8 +9,8 @@ const Dashboard: React.FC = () => {
   const [currentProject, setCurrentProject] = useState(projects[0]);
   const [toggleProject,setToggleProject]= useState(false)
   return (
-    <section>
-      <ProjectNav toggleProject={toggleProject} />
+    <section className={`dashboard ${toggleProject? "sectionWithPadding":""} `}>
+      <ProjectNav toggleProject={toggleProject} setToggleProject={setToggleProject}/>
       <div className="project-container">
         <img src={currentProject.cover} alt={currentProject.name} />
         <h2>{currentProject.name}</h2>

@@ -93,3 +93,11 @@
   border-radius: 60px;
   border: transparent;
 }
+
+.dashboard {
+  transition: 0.5s padding ease;
+}
+
+.sectionWithPadding {
+  padding-left: 40rem;
+}
