@@ -11,7 +11,6 @@ interface ProjectsProps {
 const Projects: React.FC<ProjectsProps> = ({ projects, setCurrentProject,setProjects,toggleProject }) => {
   const handleChange = (project: Project) => {
     setCurrentProject(project);
-    // eslint-disable-next-line array-callback-return
     const newProject = projects.map((item:Project)=> {
       if(item.id === project.id){
         return {
@@ -26,6 +25,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects, setCurrentProject,setProj
       }
     })
     setProjects(newProject)
+    
   };
 
   return (

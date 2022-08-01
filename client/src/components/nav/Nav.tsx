@@ -1,21 +1,12 @@
 import React from "react";
 import "./nav.css";
 import logo from "../../images/pearls.png";
-import { FaHome, FaSignInAlt } from 'react-icons/fa';
+import { FaHome, FaSignInAlt,FaBars,FaTimes } from 'react-icons/fa';
 const Nav:React.FC = () => {
   return (
-    <header className="header">
-      <nav className="main-nav">
-        <ul className="main-nav-list">
-          <li> <a href="/app/home">
-        {" "}
+    <header className="header">  
         <img src={logo} alt="jewelry logo" className="logo" />
-      </a></li>
-          <li> <a href="/dashboard" className="main-nav-link">
-                Projects
-            </a></li>
-        </ul>
-      </nav>
+
       <nav className="main-nav">
         <ul className="main-nav-list">
           <li>
@@ -23,6 +14,9 @@ const Nav:React.FC = () => {
               <FaHome />  Home
             </a>
           </li>
+          <li> <a href="/dashboard" className="main-nav-link">
+                Projects
+            </a></li>
           <li>
             <a href="/register" className="main-nav-link">
               Register
@@ -35,6 +29,10 @@ const Nav:React.FC = () => {
           </li>
         </ul>
       </nav>
+      <button className="btn-mobile-nav">
+        <FaBars className="icon-mobile-nav" name="menu-outline"/>
+        <FaTimes className="icon-mobile-nav" name="close-outline"/>
+      </button>
     </header>
   );
 };
