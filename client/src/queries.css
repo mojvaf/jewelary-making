@@ -45,7 +45,29 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity:0;
+    transform: translateX(100%);
+    /*Make it unaccessible to mouse */
+    pointer-events: none;
+    visibility: hidden;
+    transition: all 0.5s ;
   }
+
+  .nav-open .main-nav{
+    opacity:1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"]{
+    display:block
+ }
+
+ .nav-open .icon-mobile-nav[name="menu-outline"]{
+  display:none
+}
+
 
   .main-nav-list {
     flex-direction: column;

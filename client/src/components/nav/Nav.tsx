@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "./nav.css";
 import logo from "../../images/pearls.png";
 import { FaHome, FaSignInAlt,FaBars,FaTimes } from 'react-icons/fa';
-const Nav:React.FC = () => {
+
+interface ProjectProps {
+  isOpen: boolean
+  setIsOpen:(data:boolean)=>void
+}
+
+const Nav:React.FC<ProjectProps> = () => {
+  const [isOpen,setIsOpen]= useState(false) 
+
   return (
-    <header className="header">  
+    <header className={`header ${isOpen? "nav-open" : "" }`}>  
         <img src={logo} alt="jewelry logo" className="logo" />
 
       <nav className="main-nav">
@@ -29,7 +37,7 @@ const Nav:React.FC = () => {
           </li>
         </ul>
       </nav>
-      <button className="btn-mobile-nav">
+      <button className="btn-mobile-nav" onClick={()=>setIsOpen(!isOpen)}>
         <FaBars className="icon-mobile-nav" name="menu-outline"/>
         <FaTimes className="icon-mobile-nav" name="close-outline"/>
       </button>
