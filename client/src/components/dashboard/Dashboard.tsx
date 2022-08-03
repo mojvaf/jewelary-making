@@ -15,7 +15,7 @@ const Dashboard: React.FC = () => {
         <img src={currentProject.cover} alt={currentProject.name} />
         <h2>{currentProject.name}</h2>
         <h3>{currentProject.artist}</h3>
-        <button>read more</button>
+        <button className="btn">read more</button>
       </div>
       <Projects projects={projects} setCurrentProject={setCurrentProject}  setProjects={setProjects} toggleProject={toggleProject}/>
     </section>
