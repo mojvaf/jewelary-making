@@ -4,8 +4,7 @@ import logo from "../../images/pearls.png";
 import { FaHome, FaSignInAlt,FaBars,FaTimes } from 'react-icons/fa';
 
 interface ProjectProps {
-  isOpen: boolean
-  setIsOpen:(data:boolean)=>void
+ 
 }
 
 const Nav:React.FC<ProjectProps> = () => {
