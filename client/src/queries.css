@@ -79,6 +79,13 @@
     font-size: 3.6rem;
     font-weight: 600;
   }
+
+  .register-box{
+    width: 70%;
+  }
+  .section-register .btn-register{
+    display:none
+  }
 }
 
 /*--Font size system(px)
