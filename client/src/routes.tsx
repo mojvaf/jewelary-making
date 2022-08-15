@@ -25,18 +25,17 @@ export const useAppRoutes = () => {
     },
     {
       path: "/login",
-      element: isLogin ? <Navigate to="/profile" /> : <Login />,
+      element: isLogin ? <Navigate to="/dashboard" /> : <Login />,
     },
     {
       path: "/register",
-      element: <Register />,
+      element: isLogin ? <Navigate to="/dashboard" /> : <Register />,
     },
     {
       path: "/dashboard",
-      element: <Dashboard />,
+      element: !isLogin?  <Dashboard /> : <Navigate to="/login"/>,
     },
   ];
-
 
   return useRoutes(routes);
 };
