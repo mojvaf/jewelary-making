@@ -29,8 +29,9 @@ router.post(
   ],
   async (req, res) => {
     const errors = validationResult(req);
+    console.log("salam", errors.array());
     if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() });
+      return res.status(400).json({ msg: errors.array()[0].msg });
     }
     const { email, password } = req.body;
     try {

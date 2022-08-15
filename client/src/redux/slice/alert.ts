@@ -8,13 +8,13 @@ type itemType = {
 };
 
 interface StateType {
-  alert: itemType[];
+  alert:itemType[]
 }
 
 const slice = createSlice({
   name: "Alert",
   initialState: {
-    alert: [],
+    alert:[],
   } as StateType,
   reducers: {
     setAlert: (
@@ -24,11 +24,11 @@ const slice = createSlice({
       //[...state,action.payload]
       const id = uuid.v4();
       state.alert.push({
-        msg: action.payload.msg,
-        alertType: action.payload.alertType,
+      msg: action.payload.msg,
+      alertType: action.payload.alertType,
         id: id,
-      });
-      setTimeout(() => {
+       });
+     setTimeout(() => {
         state.alert = state.alert.filter((item) => item.id !== id);
       }, 2000);
     },

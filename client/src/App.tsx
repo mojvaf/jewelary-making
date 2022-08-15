@@ -1,5 +1,5 @@
 import React from "react";
-import { useAppRoutes } from "./routes";
+import { useAppRoutes } from "./hook/useAppRoutes";
 import "./App.css";
 import "./queries.css";
 
