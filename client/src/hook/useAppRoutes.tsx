@@ -1,10 +1,10 @@
 import { Navigate, useRoutes } from "react-router-dom";
-import Login from "./components/login/Login";
-import Register from "./components/register/Register";
-import Home from "./components/home/Home";
-import Layout from "./components/layout/Layout";
-import Dashboard from "./components/dashboard/Dashboard";
-import { useAppSelector } from "./redux/store";
+import Login from "../components/login/Login";
+import Register from "../components/register/Register";
+import Home from "../components/home/Home";
+import Layout from "../components/layout/Layout";
+import Dashboard from "../components/dashboard/Dashboard";
+import { useAppSelector } from "../redux/store";
 
 export const useAppRoutes = () => {
   const isLogin = useAppSelector((store) => store.auth.isAuthenticated);
@@ -33,7 +33,7 @@ export const useAppRoutes = () => {
     },
     {
       path: "/dashboard",
-      element: !isLogin?  <Dashboard /> : <Navigate to="/login"/>,
+      element: isLogin ? <Dashboard /> : <Navigate to="/login" />,
     },
   ];
 

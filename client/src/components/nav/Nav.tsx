@@ -44,11 +44,14 @@ const Nav: React.FC<ProjectProps> = () => {
           )}
           <li>
             {isLogin ? (
-            
-               <a href="#" className="main-nav-link">
-                <FaSignOutAlt onClick={() => dispatch(logout())} />
+              <a
+                href="#"
+                className="main-nav-link"
+                onClick={() => dispatch(logout())}
+              >
+                <FaSignOutAlt />
                 <span>Log out</span>
-                </a>
+              </a>
             ) : (
               <a href="/login" className="main-nav-link">
                 <FaSignInAlt /> <span>Log in</span>

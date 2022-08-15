@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import "./register.css";
-import { useAppDispatch, useAppSelector } from "../../redux/store";
+import { useAppDispatch} from "../../redux/store";
 import { login } from "../../redux/slice/auth";
-import { setAlert, removeAlert } from "../../redux/slice/alert";
 import { AuthService } from "../../service/auth.service";
 import { RegisterRequestBody } from "../../models/auth";
-
+import { alertType, useAlert } from "../../hook/useAlert";
 
 const Register: React.FC = () => {
+  
+  const { showAlert, renderAlert } = useAlert();
   const [formData, setFormData] = useState<RegisterRequestBody>({
     name: "",
     last: "",
@@ -19,7 +20,6 @@ const Register: React.FC = () => {
   const { name, last, email, password, confirmPassword } = formData;
 
   const dispatch = useAppDispatch();
-  const alerts = useAppSelector((store) => store.alert.alert);
 
   const handelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newForm = {
@@ -32,19 +32,9 @@ const Register: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (password !== confirmPassword){ 
-    
-      dispatch(
-        setAlert({
-          msg: "Passwords do not match ",
-          alertType: "danger",
-        })
-      );
-      /*setTimeout(() => {
-        dispatch(removeAlert());
-      }, 2000);*/
-            dispatch(removeAlert);
-      } else {
+    if (password !== confirmPassword) {
+      showAlert("Passwords do not match ", alertType.ERROR);
+    } else {
       const body: RegisterRequestBody = {
         name: formData.name,
         last: formData.last,
@@ -55,17 +45,11 @@ const Register: React.FC = () => {
       AuthService.register(body)
         .then((res) => {
           dispatch(login({ token: res.data.token }));
+          showAlert("You have successfully singed up", alertType.SUCCESS);
         })
         .catch((err) => {
-          //showAlert(err.response.data.msg);
+          showAlert(err.response.data.msg || "error", alertType.ERROR);
         });
-      /*dispatch(login(body));
-      dispatch(
-        setAlert({
-          msg: "You have successfully singed up",
-          alertType: "success",
-        })
-      );*/
     }
   };
 
@@ -77,13 +61,7 @@ const Register: React.FC = () => {
           Sign up here to receive updates about our projects and ways to get
           involved.
         </p>
-         {alerts !== null &&
-          alerts.length > 0 &&
-          alerts.map((item) => (
-            <div key={item.id} className={`alert alert-${item.alertType}`}>
-              {item.msg}
-            </div>
-          ))} 
+        {renderAlert()}
         <form className="form-register" onSubmit={handleSubmit}>
           <div className="form-control">
             <label>Name</label>
