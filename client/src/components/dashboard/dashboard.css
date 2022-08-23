@@ -47,15 +47,19 @@
   cursor: pointer;
 }
 
-.selected{
-    background-color: #26413e;
-    color: #e8eeed;
+.selected {
+  background-color: #26413e;
+  color: #e8eeed;
 }
 .library-list:hover {
   background-color: #a0b6b4;
 }
-.library-list img {
-  width: 50%;
+.library-list .img {
+  width: 10rem;
+  height: 10rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .library-description {
@@ -88,4 +92,12 @@
   background-color: #26413e;
   border-radius: 60px;
   border: transparent;
+}
+
+.dashboard {
+  transition: 0.5s padding ease;
+}
+
+.section_padding {
+  padding-left: 40rem;
 }

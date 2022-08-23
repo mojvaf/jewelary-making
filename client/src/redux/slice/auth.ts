@@ -1,33 +1,30 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { User } from "../../models/auth";
-import axios from 'axios'
-
-
+import {setAlert} from './alert'
 type stateType = {
-    token: string,
-    isAuthenticated: boolean,
-    loading:boolean,
-    user: any
-}
+  token: string;
+  isAuthenticated: boolean;
+};
 
 const slice = createSlice({
-    name: 'auth',
-initialState:
- {
-    token: localStorage.getItem('token'),
-    isAuthenticated: false,
-    loading: true,
-    user: null
- } as stateType,
-  reducers:{
-      register: (state:stateType, action:PayloadAction<User>)=>{
-        axios.post('/api/users',action.payload).then((res)=> console.log(res)).catch(err=> console.log('there is an error'))
-      }
+  name: "auth",
+  initialState: {
+    token: localStorage.getItem("token"),
+    isAuthenticated: !!localStorage.getItem('token'),
+  } as stateType,
+  reducers: {
+    login: (state: stateType, action: PayloadAction<{token:string}>) => {
+       state.token = action.payload.token 
+     localStorage.setItem('token', action.payload.token)
+     state.isAuthenticated= true
+    },
+    logout:(state:stateType)=>{
+      state.token= ''
+      localStorage.removeItem('token')
+      state.isAuthenticated=false
+    }
   }
-})
+});
 
-
-
-export const { register } = slice.actions;
+export const { login, logout } = slice.actions;
 
 export default slice.reducer;

@@ -5,10 +5,10 @@
   --- 01 Typography system 
 
   --Spacing system (px)
-  2/4/8/12/16/24/32/48/64/80/96/128
+  2/4/8/12/16/24/32/52/48/64/80/96/128
 
   --Font size system(px)
-  10/12/14/16/18/20/24/30/36/44/52/62/74/86/98
+  10/12/14/16/18/20/24/30/36/44/62/74/86/98
 
   --line heights:
   Default: 1
@@ -53,7 +53,11 @@
 }
 
 html {
-  font-size: 62.5%;
+  /*font-size: 8px;
+   8px/16px = 0.5 = 50%
+  */
+  font-size: 50%;
+  overflow-x: hidden;
 }
 
 body {
@@ -61,6 +65,7 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #555;
+  overflow-x: hidden;
 }
 
 /*******************/
@@ -231,10 +236,14 @@ strong {
 
 .alert-danger{
   background-color: #bb4b2d;
-  color: #555;
+  color: wheat;
+  font-size: 2rem;
+  width: 50%;
 }
 
 .alert-success{
   background-color: green;
   color: #fff;
+  font-size: 2rem;
+  width: 50%;
 }

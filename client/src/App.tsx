@@ -1,10 +1,10 @@
 import React from "react";
-import { useRoutes } from "react-router-dom";
-import { routes } from "./routes";
+import { useAppRoutes } from "./hook/useAppRoutes";
 import "./App.css";
+import "./queries.css";
 
 function App() {
-  const routesRendered = useRoutes(routes);
+  const routesRendered = useAppRoutes();
 
   return <div className="App">{routesRendered}</div>;
 }

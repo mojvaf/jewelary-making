@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Wire Jewelry",
+    "cover": "https://cdn.pixabay.com/photo/2018/05/12/09/17/ring-with-pearls-3392725__340.png",
+    "artist": "Mia Winston",
+    "id": "11",
+    "active": true,
+    "levels": ["easy", "medium", "hard"],
+    "details": { "title": "Wire", "description": "something" }
+  },
+  {
+    "name": "Resin Jewelry",
+    "cover": "https://cdn.pixabay.com/photo/2017/07/09/13/51/decor-2486994__340.png",
+    "artist": "Mia Winston",
+    "id": "21",
+    "active": false,
+    "levels": ["easy", "medium", "hard"],
+    "details": { "title": "Resin", "description": "something" }
+  },
+  {
+    "name": "Resin Jewelry",
+    "cover": "https://cdn.pixabay.com/photo/2018/03/12/20/57/portrait-3220831__340.jpg",
+    "artist": "Mercedes Salazar",
+    "id": "32",
+    "active": false,
+    "levels": ["easy", "medium", "hard"],
+    "details": { "title": "Resin", "description": "something" }
+  },
+  {
+    "name": "Rope  Jewelry",
+    "cover": "https://cdn.pixabay.com/photo/2017/07/10/13/42/decor-2490183__340.png",
+    "artist": "Mercedes Salazar",
+    "id": "43",
+    "active": false,
+    "levels": ["easy", "medium", "hard"],
+    "details": { "title": "Rope", "description": "something" }
+  },
+  {
+    "name": "Weave  Jewelry",
+    "cover": "https://cdn.pixabay.com/photo/2013/07/11/15/22/bracelet-144646__340.jpg",
+    "artist": "Marion Mazo",
+    "id": "54",
+    "active": false,
+    "levels": ["easy", "medium", "hard"],
+    "details": { "title": "Weave", "description": "something" }
+  },
+  {
+    "name": "contemporary  Jewelry",
+    "cover": "https://cdn.pixabay.com/photo/2015/05/12/06/40/dream-catcher-763602__340.jpg",
+    "artist": "Maeberry",
+    "id": "41",
+    "active": false,
+    "levels": ["easy", "medium", "hard"],
+    "details": { "title": "Contemporary", "description": "something" }
+  },
+  {
+    "name": "Breaded jewelry",
+    "cover": "https://cdn.pixabay.com/photo/2015/12/27/19/54/ring-1110322__340.jpg",
+    "artist": "Karen",
+    "id": "61",
+    "active": false,
+    "levels": ["easy", "medium", "hard"],
+    "details": { "title": "Breaded", "description": "something" }
+  },
+  {
+    "name": "Custom jewelry",
+    "cover": "https://cdn.pixabay.com/photo/2019/11/24/14/12/diamonds-4649491__340.png",
+    "artist": "Karen",
+    "id": "65",
+    "active": false,
+    "levels": ["easy", "medium", "hard"],
+    "details": { "title": "Custom", "description": "something" }
+  },
+  {
+    "name": "Nature jewelry",
+    "cover": "https://cdn.pixabay.com/photo/2017/12/02/10/14/pattern-2992582__340.png",
+    "artist": "Karen",
+    "id": "62",
+    "active": false,
+    "levels": ["easy", "medium", "hard"],
+    "details": { "title": "Nature", "description": "something" }
+  },
+  {
+    "name": "Laser Cutting",
+    "cover": "https://cdn.pixabay.com/photo/2015/03/12/01/42/apatite-669515__340.jpg",
+    "artist": "Maeberry",
+    "id": "63",
+    "active": false,
+    "levels": ["easy", "medium", "hard"],
+    "details": { "title": "Laser", "description": "something" }
+  }
+]
