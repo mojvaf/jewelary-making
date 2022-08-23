@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./dashboard.css";
-import Projects from "../projects/Projects";
-import list from "../../mock/projectList.json";
-import ProjectNav from "../projectNav/ProjectNav";
+import list from "../../util";
+
 
 const Dashboard: React.FC = () => {
   const [projects, setProjects] = useState(list);
