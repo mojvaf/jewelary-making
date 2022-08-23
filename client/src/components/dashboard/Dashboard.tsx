@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./dashboard.css";
-import Projects from "../projects/Projects";
 import list from "../../util";
 
 const Dashboard: React.FC = () => {
