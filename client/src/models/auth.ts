@@ -6,6 +6,7 @@ export interface RegisterRequestBody {
   confirmPassword: string;
 }
 export interface LoginRequestBody {
+  name:string;
   email: string;
   password: string;
 }
