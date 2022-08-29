@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "./dashboard.css";
-import list from "../../util";
+import list from "../../mock/projectList.json";
+import ProjectNav from "../projectNav/ProjectNav";
+import Projects from "../projects/Projects";
+
 
 
 const Dashboard: React.FC = () => {
