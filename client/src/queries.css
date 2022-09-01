@@ -75,10 +75,14 @@
   }
 
   .main-nav-link:link,
-  .main-nav-link:visited {
+  .main-nav-link:visited,
+  .main-nav-list span
+   {
     font-size: 3.6rem;
     font-weight: 600;
   }
+
+  
 
   .register-box{
     width: 70%;

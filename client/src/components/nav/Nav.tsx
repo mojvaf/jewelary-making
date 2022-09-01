@@ -11,6 +11,7 @@ import {
 } from "react-icons/fa";
 import { useAppSelector } from "../../redux/store";
 import { logout } from "../../redux/slice/auth";
+import { Link } from "react-router-dom";
 
 interface ProjectProps {}
 
@@ -25,37 +26,36 @@ const Nav: React.FC<ProjectProps> = () => {
       <nav className="main-nav">
         <ul className="main-nav-list">
           <li>
-            <a href="/" className="main-nav-link">
+            <Link to="/" className="main-nav-link">
               <FaHome /> Home
-            </a>
+            </Link>
           </li>
           <li>
             {" "}
-            <a href="/dashboard" className="main-nav-link">
+            <Link to="/dashboard" className="main-nav-link">
               Projects
-            </a>
+            </Link>
           </li>
           {!isLogin && (
             <li>
-              <a href="/register" className="main-nav-link">
+              <Link to="/register" className="main-nav-link">
                 Register
-              </a>
+              </Link>
             </li>
           )}
           <li>
             {isLogin ? (
-              <a
-                href="#"
-                className="main-nav-link"
+              <span 
+                className=""
                 onClick={() => dispatch(logout())}
               >
                 <FaSignOutAlt />
                 <span>Log out</span>
-              </a>
+              </span>
             ) : (
-              <a href="/login" className="main-nav-link">
+          <Link to="/login" className="main-nav-link">
                 <FaSignInAlt /> <span>Log in</span>
-              </a>
+              </Link>
             )}
           </li>
         </ul>

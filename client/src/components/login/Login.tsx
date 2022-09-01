@@ -2,19 +2,20 @@ import React, { useState } from "react";
 import "./login.css";
 import { Link } from "react-router-dom";
 import { useAppDispatch } from "../../redux/store";
-import { useAlert } from "../../hook/useAlert";
+import { alertType, useAlert } from "../../hook/useAlert";
 import { LoginRequestBody } from "../../models/auth";
+import { AuthService } from "../../service/auth.service";
+import { login } from "../../redux/slice/auth";
 
 const Login: React.FC = () => {
   const { showAlert, renderAlert } = useAlert();
 
   const [formData, setFormData] = useState<LoginRequestBody>({
-    name: "",
     email: "",
     password: "",
   });
 
-  const { name, email, password } = formData;
+  const {  email, password } = formData;
 
   const dispatch = useAppDispatch();
 
@@ -29,6 +30,16 @@ const Login: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if(!email || ! password){
+      showAlert('please enter your information', alertType.ERROR)
+    }else{
+      AuthService.login({email,password}).then(res=> {
+        dispatch(login({ token: res.data.token }));
+      })
+      .catch((err)=> {
+        showAlert(err.response.data.msg || "error", alertType.ERROR);
+      })
+    }
   };
 
   return (
