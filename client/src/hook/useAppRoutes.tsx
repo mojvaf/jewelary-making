@@ -5,6 +5,7 @@ import Home from "../components/home/Home";
 import Layout from "../components/layout/Layout";
 import Dashboard from "../components/dashboard/Dashboard";
 import { useAppSelector } from "../redux/store";
+import Profile from "../components/profile/Profile";
 
 export const useAppRoutes = () => {
   const isLogin = useAppSelector((store) => store.auth.isAuthenticated);
@@ -35,6 +36,10 @@ export const useAppRoutes = () => {
       path: "/dashboard",
       element: isLogin ? <Dashboard /> : <Navigate to="/login" />,
     },
+    {
+      path:'/profile',
+      element: <Profile/>
+    }
   ];
 
   return useRoutes(routes);
