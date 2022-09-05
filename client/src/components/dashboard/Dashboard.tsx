@@ -17,7 +17,6 @@ const Dashboard: React.FC = () => {
         setToggleProject={setToggleProject}
       />
       <div className="project-container">
-        <h2>Hello </h2>
         <img src={currentProject.cover} alt={currentProject.name} />
         <h2>{currentProject.name}</h2>
         <h3>{currentProject.artist}</h3>

@@ -26,6 +26,15 @@ const Home:React.FC = () => {
           <img src={stain} alt="stainless" className="hero-img" />
         </div>
       </div>
+      <div className="section-howWorks">
+        <div className="container">
+          <span className="subheading">How it works</span>
+          <h2 className="heading-secondary">There are two sections in this app</h2>
+        </div>
+        <div className="container grid grid--2--cols grid--center-v">
+           <div className=""></div>
+        </div>
+      </div>
     </main>
   );
 };
