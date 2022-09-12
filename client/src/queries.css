@@ -90,6 +90,15 @@
   .section-register .btn-register{
     display:none
   }
+
+  .grid--2-cols,
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: 1fr;
+  }
+  .step-number-box:nth-child(2) {
+    grid-row: 1;
+  }
 }
 
 /*--Font size system(px)

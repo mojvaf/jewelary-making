@@ -33,7 +33,7 @@ const Home: React.FC = () => {
             There are two sections in this app
           </h2>
         </div>
-        <div className="container grid grid--2--cols grid--center-v">
+        <div className="container grid grid--2-cols grid--center-v">
           <div className="step-text-box">
             <h3 className="subheading">Become a Jewelry Constructor </h3>
             <p className="home-description">
@@ -44,14 +44,14 @@ const Home: React.FC = () => {
           <div className="step-number-box">
             <p className="step-number">01</p>
           </div>
+               
           <div className="step-number-box">
             <p className="step-number">02</p>
           </div>
           <div className="step-text-box">
             <h3 className="subheading">Become a Jewelry maker</h3>
             <p className="home-description">
-              If you would like to have a class or you have a project that you
-              want to sell it then you are in the right place.
+              Are you looking for a project to do with a  Constructor or with a friend?
             </p>
           </div>
         </div>

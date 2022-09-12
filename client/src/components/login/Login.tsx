@@ -71,6 +71,7 @@ const Login: React.FC = () => {
             <small>Please enter your password</small>
           </div>
           <button>Submit</button>
+          {renderAlert()}
           <p className="my-1">
             Don't have an account? <Link to="/register">Sign Up</Link>
           </p>
