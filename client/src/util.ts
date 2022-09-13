@@ -11,3 +11,10 @@ export interface Project {
   }
 }
 
+export interface Testimonials {
+  name:string,
+  cover: string,
+  text:string,
+  id:string
+}
+
