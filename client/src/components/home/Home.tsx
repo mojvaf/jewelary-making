@@ -1,6 +1,7 @@
 import React from "react";
 import "./home.css";
 import stain from "../../images/stainless.jpg";
+import Testimonial from "../testimonial/Testimonial";
 
 const Home: React.FC = () => {
   return (
@@ -56,6 +57,7 @@ const Home: React.FC = () => {
           </div>
         </div>
       </div>
+      <Testimonial/>
     </main>
   );
 };
