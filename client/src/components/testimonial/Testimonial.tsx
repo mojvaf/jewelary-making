@@ -1,41 +1,38 @@
 import React, { useState } from "react";
 import "./testimonial.css";
 import { Testimonials } from "../../util";
-import six from "../../images/customer-6.jpg";
-import three from "../../images/customer-3.jpg";
-
-
-
+import test from "../../mock/testimonial.json";
 
 const Testimonial: React.FC = () => {
-  const [testimonials,setTestimonials] = useState<Testimonials>()
+  const [testimonials, setTestimonials] = useState<Testimonials[]>(test);
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   return (
-    <section>
-      <div className="carousel">
-        <img src={six} alt="bangles" className="testimonial-img" />
-        <blockquote className="testimonial">
-          <p className="testimonial-text">
-            <span className="testimonial-quot">&#10077; </span> The AI algorithm
-            is very good, it chooses the project for me every time. It's amazing
-            it brings you the right project any time! I also invited my friend.
-          </p>
-          <p className="testimonial-name">&mdash; Nina Hadley</p>
-        </blockquote>
-        <img src={three} alt="bangles" className="testimonial-img" />
-        <blockquote className="testimonial">
-          <p className="testimonial-text">
-            <span className="testimonial-quot">&#10077; </span> I got smartKids
-            for the my daughter and I, and it fills up so much time being
-            tother! Plus, they send everything you need to start the project.
-          </p>
-          <p className="testimonial-name">&mdash; simin York</p>
-        </blockquote>
-
-        <div className="dots">
-          <button className="dot dot-white"></button>
-          <button className="dot"></button>
+    <section className="testimonials-section">
+      <div className="testimonials-container">
+      {testimonials.map((item, index) => (
+        <div
+          className={`carousel ${index === currentIndex && "carousel-active"}`}
+        >
+          <img src={item.cover} alt="bangles" className="testimonial-img" />
+          <blockquote className="testimonial">
+            <p className="testimonial-text">
+              <span className="testimonial-quot">&#10077; </span> {item.text}
+            </p>
+            <p className="testimonial-name">&mdash; {item.name}</p>
+          </blockquote>
         </div>
+      ))}
+      </div>
+      <div className="dots">
+        <button
+          className={`dot ${currentIndex === 1 && "dot-white"}`}
+          onClick={() => setCurrentIndex(0)}
+        ></button>
+        <button
+          className={`dot ${currentIndex === 0 && "dot-white"}`}
+          onClick={() => setCurrentIndex(1)}
+        ></button>
       </div>
     </section>
   );
