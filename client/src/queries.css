@@ -82,45 +82,60 @@
     font-weight: 600;
   }
 
-  .register-box {
-    width: 70%;
-  }
-  .section-register .btn-register {
-    display: none;
-  }
-
   .grid--2-cols,
   .grid--3-cols,
   .grid--4-cols {
     grid-template-columns: 1fr;
   }
+
+  /*Register part*/
+  .register-box {
+    width: 100%;
+  }
+
+  
+  .section-register .btn-register {
+    display: none;
+    
+  }
+
+  .form-register{
+    display: flex;
+    flex-direction: column;
+  }
+  /*Login part*/
+  .log-part{
+    width: 100%;
+  }
+  /*home part*/
+
   .step-number-box:nth-child(2) {
     grid-row: 1;
   }
 
+  /*Testimonial part*/
   .testimonials-container {
     max-width: 120rem;
     margin-top: 40px;
   }
 
-  .carousel{
+  .carousel {
     display: flex;
     flex-direction: column;
     width: 80%;
     gap: 22px;
   }
 
-  .testimonial-img{
+  .testimonial-img {
     border-radius: 50%;
     width: 20%;
-  
   }
- 
- .testimonials-text{
+
+  .testimonials-text {
     line-height: normal;
   }
 
-  .dots{
+  .dots {
     margin-top: 35px;
   }
 }
