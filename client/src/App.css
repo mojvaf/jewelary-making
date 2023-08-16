@@ -104,6 +104,7 @@ body {
   grid-template-columns: repeat(5, 1fr);
 }
 
+
 .grid--center-v {
   align-items: center;
 }
@@ -121,17 +122,15 @@ body {
   margin-bottom: 3.2rem;
 }
 
-
 .heading-secondary {
   font-size: 4.4rem;
   line-height: 1.2;
   margin-bottom: 9.6rem;
 }
 
-.heading-tertiary{
+.heading-tertiary {
   font-size: 3.6rem;
   line-height: 1.2;
-
 }
 
 .subheading {
@@ -236,19 +235,19 @@ strong {
   color: #d9e2e1;
 }
 
-.alert-light{
+.alert-light {
   background-color: yellow;
   color: #555;
 }
 
-.alert-danger{
+.alert-danger {
   background-color: #bb4b2d;
   color: wheat;
   font-size: 2rem;
   width: 50%;
 }
 
-.alert-success{
+.alert-success {
   background-color: green;
   color: #fff;
   font-size: 2rem;
