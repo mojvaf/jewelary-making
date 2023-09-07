@@ -8,6 +8,7 @@ const Dashboard: React.FC = () => {
   const [projects, setProjects] = useState(list);
   const [currentProject, setCurrentProject] = useState(projects[0]);
   const [toggleProject, setToggleProject] = useState(false);
+  //
   return (
     <section className={`dashboard ${toggleProject ? "section_padding" : ""} `}>
       <ProjectNav
