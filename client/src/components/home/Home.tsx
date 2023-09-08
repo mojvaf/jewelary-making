@@ -10,17 +10,15 @@ const Home: React.FC = () => {
         <div className="hero-text-box">
           <h1 className="heading-primary">Jewelry Making</h1>
           <p className="hero-description">
-            Have you ever spotted an expensive necklace at a store and said to
-            yourself- ‘I could make that at home myself’? And have you ever
-            looked at art supplies and been inspired to create accessories and
-            jewelry of your own design?
+            Have you ever seen an expensive necklace in a store and thought, 'I
+            could make that at home'? Have art supplies ever inspired you to
+            create your own accessories and jewelry?
           </p>
           <p className="hero-description">
-            If you have, then you’re not alone in your search for the perfect
-            DIY hobby that is also a form of art. There are millions of women
-            who are creating handmade fashion jewelry at home for personal wear,
-            and some have even successfully turned their hobbies into a
-            flourishing business.
+            If you have, you're not alone in your search for the perfect DIY
+            hobby that's also an art form. Millions of women are crafting
+            handmade fashion jewelry at home for personal wear, and some have
+            even turned their hobbies into thriving businesses.
           </p>
         </div>
         <div className="hero-img-box">
@@ -38,26 +36,27 @@ const Home: React.FC = () => {
           <div className="step-text-box">
             <h3 className="subheading">Become a Jewelry Constructor </h3>
             <p className="home-description">
-              If you would like to have a class or you have a project that you
-              want to sell it then you are in the right place.
+              If you're interested in offering a class or selling a project,
+              you've come to the right place.
             </p>
           </div>
           <div className="step-number-box">
             <p className="step-number">01</p>
           </div>
-               
+
           <div className="step-number-box">
             <p className="step-number">02</p>
           </div>
           <div className="step-text-box">
             <h3 className="subheading">Become a Jewelry maker</h3>
             <p className="home-description">
-              Are you looking for a project to do with a  Constructor or with a friend?
+              Are you searching for a project to work on independently or with a
+              friend?
             </p>
           </div>
         </div>
       </div>
-      <Testimonial/>
+      <Testimonial />
     </main>
   );
 };
