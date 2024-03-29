@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import "./register.css";
-import { useAppDispatch} from "../../redux/store";
+import { useAppDispatch } from "../../redux/store";
 import { login } from "../../redux/slice/auth";
 import { AuthService } from "../../service/auth.service";
 import { RegisterRequestBody } from "../../models/auth";
 import { alertType, useAlert } from "../../hook/useAlert";
 
 const Register: React.FC = () => {
-  
   const { showAlert, renderAlert } = useAlert();
   const [formData, setFormData] = useState<RegisterRequestBody>({
     name: "",
